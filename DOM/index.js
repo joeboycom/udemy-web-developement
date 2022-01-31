@@ -21,3 +21,6 @@ document.querySelector("h1").style.fontSize = "6rem"; // change the font size of
 document.querySelector("button").classList.add("invisible");    // hide all buttons by adding invisible CSS code
 document.querySelector("button").classList.remove("invisible"); // show hidden buttons
 document.querySelector("button").classList.toggle("invisible"); // If buttons are invisible, then show them. Otherwise, hide them.
+
+// 146. Text Manipulation and the Text Content Property
+document.querySelector("h1").innerHTML = "<em>Good Bye</em>"   // change h1 text and add em tag on in
