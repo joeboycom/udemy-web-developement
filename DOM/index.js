@@ -24,3 +24,9 @@ document.querySelector("button").classList.toggle("invisible"); // If buttons ar
 
 // 146. Text Manipulation and the Text Content Property
 document.querySelector("h1").innerHTML = "<em>Good Bye</em>"   // change h1 text and add em tag on in
+
+// 147. Manipulating HTML Element Attributes
+document.querySelector("a") // <a href="https://www.google.com" style="color: red;">Google</a>
+document.querySelector("a").attributes // NamedNodeMap {0: href, 1: style, href: href, style: style, length: 2}
+document.querySelector("a").setAttribute("href", "https://www.bing.com");
+document.querySelector("a").getAttribute("href"); // 'https://www.bing.com'
