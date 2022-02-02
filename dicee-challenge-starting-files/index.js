@@ -1,5 +1,5 @@
-var randomNumber1 = Math.round(Math.random()*5) + 1;
-var randomNumber2 = Math.round(Math.random()*5) + 1;
+var randomNumber1 = Math.floor(Math.random()*5) + 1;
+var randomNumber2 = Math.floor(Math.random()*5) + 1;
 
 var dice1 = "images/dice" + randomNumber1.toString() + ".png";
 var dice2 = "images/dice" + randomNumber2.toString() + ".png";
