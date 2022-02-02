@@ -10,6 +10,31 @@
 
 }
 
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+img.emojione {
+  margin: 0px !important;
+  display: inline !important;
+
+  height: auto;
+  width: 50px;
+}
+
+p#wrong-test {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  display: inline-block;
+}
+
+span.emoj {
+  font-size: 80px;
+  vertical-align: middle;
+  line-height: 2;
+}
+
 body {
   background-color: #393E46;
 }

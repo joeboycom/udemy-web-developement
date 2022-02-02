@@ -9,3 +9,14 @@ document.querySelectorAll("img")[1].setAttribute("src", dice2);
 
 console.log(dice1);
 console.log(dice2);
+
+
+if (randomNumber1>randomNumber2) {
+  document.querySelector("h1").innerHTML = "Player1 Wins!";
+  document.getElementById("emoj1").style.display = "block";
+} else if(randomNumber1<randomNumber2) {
+  document.querySelector("h1").innerHTML = "Player2 Wins!";
+  document.getElementById("emoj2").style.display = "block";
+} else {
+  document.querySelector("h1").innerHTML = "Draw";
+}
