@@ -4,10 +4,15 @@ for (var i = 0; i < numberOfDrimButtons; i++) {
   document.querySelectorAll(".drum")[i].addEventListener("click", function() { // type = "click"
     console.log(this); // <button class="d drum">d</button>
     console.log(this.innerHTML); // d
-    console.log(this.style.color = "white");
 
     var buttonInnerHTML = this.innerHTML;
+
+    changeTextColor(this);
+
     makeSound(buttonInnerHTML);
+
+    buttonAnimation(buttonInnerHTML);
+
   });
 }
 
@@ -40,7 +45,8 @@ function makeSound(key) {
       playAudio("sounds/kick-bass.mp3");
       break;
 
-    default: console.log(buttonInnerHTML);
+    default:
+      console.log(buttonInnerHTML);
 
   }
 }
@@ -50,9 +56,26 @@ function playAudio(path) {
   audio.play();
 }
 
+// detecting keyboard press
 document.addEventListener("keydown", function(event) {
   makeSound(event.key);
+  buttonAnimation(event.key);
 })
+
+function buttonAnimation(currentKey) {
+  var activeButton = document.querySelector("." + currentKey);
+  activeButton.classList.add("pressed");
+  setTimeout(function() {
+    activeButton.classList.remove("pressed");
+  }, 100);
+}
+
+function changeTextColor(button) {
+  button.style.color = "white"
+  setTimeout(function() {
+    button.style.color = "red"
+  }, 100);
+}
 
 
 /* Higher Order Functions - Hiher order functions aere functions that can take other functions as inputs. */
