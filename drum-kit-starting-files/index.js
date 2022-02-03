@@ -1,12 +1,16 @@
 var numberOfDrimButtons = document.querySelectorAll(".drum").length;
 
 for (var i = 0; i < numberOfDrimButtons; i++) {
-  document.querySelectorAll(".drum")[i].addEventListener("click", function() {
-    alert("Click");
-    // What to do when click detected.
+  document.querySelectorAll(".drum")[i].addEventListener("click", function() { // type = "click"
+    console.log(this);            // <button class="d drum">d</button>
+    console.log(this.innerHTML);  // d
+    console.log(this.style.color = "white");         
   });
 }
 
+
+// var audio = new Audio("sounds/crash.mp3");
+// audio.play();
 
 /* Higher Order Functions - Hiher order functions aere functions that can take other functions as inputs. */
 function add(num1, num2) {
