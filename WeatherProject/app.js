@@ -1,10 +1,17 @@
 // jshint esversion: 6
 
 const express = require("express");
+const https = require("https");
 
 const app = express();
 
 app.get("/", function(req, res) {
+
+  const url = "https://api.openweathermap.org/data/2.5/find?q=London&appid=499981c60f06e6f25a39cdbe21601753&units=metric";
+
+  https.get(url, function(response) {
+    console.log(response);
+  });
   res.send("Server is up and running.");
 });
 
