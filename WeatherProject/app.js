@@ -18,14 +18,23 @@ app.get("/", function(req, res) {
         name: "Joe",
       };
       const temp = weatherData.main.temp; // you can copy path from JSON Awesome
-      const description = weatherData.weather[0].description; // you can copy path from JSON Awesome
+      const weatherDescription = weatherData.weather[0].description; // you can copy path from JSON Awesome
+      const icon = weatherData.weather[0].icon;
+      const imageURL = "https://openweathermap.org/img/wn/"+ icon +"@2x.png";
       console.log(JSON.stringify(object)); // {"name":"Joe"}
       console.log(weatherData); // whole weather response
       console.log(temp); // 7.7
-      console.log(description); // moderate rain
+      console.log(weatherDescription); // moderate rain
+
+
+
+      res.write("<p>The weather is currently " + weatherDescription + "</p>");
+      res.write("<h1>The temperature is " + temp + " degress Celcius</h1>");
+      res.write("<img src=" + imageURL + ">");
+      res.send();
     });
   });
-  res.send("Server is up and running.");
+  // res.send("Server is up and running."); // We can only have one res.send in any given one of these app methods
 });
 
 app.listen(3000, function() {
