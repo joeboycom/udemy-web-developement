@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Weather App</title>
+  </head>
+  <body>
+    <!-- if we wrap all components inside a form, then we'll be able to create a post request when the user hits the button  -->
+    <!-- Our form is going to make a post request to this route on our server, and we have to catch it with app.post -->
+    <form action="/" method="post">
+      <label for="cityInput">City Name: </label>
+      <input id="cityInput" type="text" name="cityName">
+      <button type="submit">Go</button>
+    </form>
+
+  </body>
+</html>
